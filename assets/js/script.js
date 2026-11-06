@@ -1,4 +1,3 @@
-
 /* ==========================================================
    FANTA CASTRONUOVO 2026/2027
    Main JavaScript
@@ -199,7 +198,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.head.appendChild(introStyle);
 
-    // Mostra l'introduzione una sola volta per sessione
     let showIntro = true;
 
     try {
@@ -249,18 +247,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             sessionStorage.setItem("fc-intro-shown", "true");
-        } catch (error) {
-            // Il sito funziona anche senza sessionStorage
-        }
+        } catch (error) {}
 
         const logo = intro.querySelector(".fc-intro-logo");
 
-        // Se il logo non viene trovato, nasconde l'introduzione
         logo.addEventListener("error", () => {
             console.warn("Logo non trovato: controlla il percorso assets/img/logo.png");
         });
 
-        // Apertura del sito dopo l'animazione
         setTimeout(() => {
             intro.classList.add("hide");
 
@@ -284,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
         menuToggle.setAttribute("aria-expanded", "false");
 
         menuToggle.addEventListener("click", () => {
-            const isOpen = mainNav.classList.toggle("open");
+            const isOpen = mainNav.classList.toggle("active");
 
             menuToggle.classList.toggle("active", isOpen);
             menuToggle.setAttribute("aria-expanded", String(isOpen));
@@ -292,7 +286,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         mainNav.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", () => {
-                mainNav.classList.remove("open");
+                mainNav.classList.remove("active");
                 menuToggle.classList.remove("active");
                 menuToggle.setAttribute("aria-expanded", "false");
             });
@@ -303,7 +297,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 !mainNav.contains(event.target) &&
                 !menuToggle.contains(event.target)
             ) {
-                mainNav.classList.remove("open");
+                mainNav.classList.remove("active");
                 menuToggle.classList.remove("active");
                 menuToggle.setAttribute("aria-expanded", "false");
             }
