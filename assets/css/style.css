@@ -1494,3 +1494,38 @@ button:focus-visible {
     outline: 3px solid var(--gold);
     outline-offset: 4px;
 }
+
+/* =========================
+   16. PERSONALIZZAZIONE TORNEO DEI RIONI
+========================= */
+
+#torneo-dei-rioni .container {
+    width: min(100% - 40px, var(--container));
+}
+
+#torneo-dei-rioni .newspaper-feature {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr; /* Dà molto più spazio al testo rispetto all'immagine */
+    align-items: center; /* Centra perfettamente gli elementi in verticale */
+    gap: 30px; /* Crea respiro tra immagine e testo */
+}
+
+#torneo-dei-rioni .newspaper-image {
+    min-height: auto;
+    background: transparent;
+}
+
+#torneo-dei-rioni .newspaper-image img {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    object-fit: contain; /* Mostra l'immagine intera senza zoomarla o tagliarla */
+    border-radius: var(--radius-md);
+}
+
+/* Responsive per tablet e smartphone */
+@media (max-width: 900px) {
+    #torneo-dei-rioni .newspaper-feature {
+        grid-template-columns: 1fr;
+    }
+}
