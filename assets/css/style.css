@@ -2047,3 +2047,72 @@ button:focus-visible {
         letter-spacing: 1px;
     }
 }
+
+/* ==========================================
+   PULSANTI SCHERMATA INIZIALE
+========================================== */
+
+.intro-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(360px, 100%);
+    margin: 28px auto 0;
+}
+
+.intro-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    width: 100%;
+    min-height: 49px;
+    padding: 13px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: transform .25s ease, background .25s ease,
+                box-shadow .25s ease;
+}
+
+.intro-button:hover {
+    transform: translateY(-3px);
+}
+
+.intro-button span {
+    font-size: 17px;
+}
+
+.intro-button-primary {
+    color: #081525;
+    background: #d6ad55;
+    box-shadow: 0 6px 20px rgba(214,173,85,.2);
+}
+
+.intro-button-primary:hover {
+    background: #e8c575;
+}
+
+.intro-button-secondary {
+    color: #fff;
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.3);
+}
+
+.intro-button-secondary:hover {
+    background: rgba(255,255,255,.17);
+}
+
+.intro-button-tertiary {
+    color: #fff;
+    background: rgba(32,184,121,.16);
+    border: 1px solid rgba(32,184,121,.55);
+}
+
+.intro-button-tertiary:hover {
+    background: rgba(32,184,121,.28);
+}
