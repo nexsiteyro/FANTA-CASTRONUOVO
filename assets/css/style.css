@@ -11,38 +11,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --navy: #081525;
-    --navy-light: #10243b;
-    --navy-soft: #172e49;
+    --navy: #101827;
+    --navy-light: #1B293B;
+    --navy-soft: #24364D;
 
-    --gold: #d6ad55;
-    --gold-light: #f0d58e;
+    --gold: #D6AD55;
+    --gold-light: #F0D58E;
 
-    --green: #20b879;
-    --red: #e34d59;
+    --green: #20B879;
+    --red: #E34D59;
 
-    --white: #ffffff;
-    --background: #f4f6f9;
-    --surface: #ffffff;
-    --surface-soft: #edf1f5;
+    --white: #FFFFFF;
+    --background: #101827;
+    --surface: #1B293B;
+    --surface-soft: #24364D;
 
-    --text: #172334;
-    --text-muted: #718096;
-    --border: #e2e8f0;
+    --text: #FFFFFF;
+    --text-muted: #AAB6C5;
+    --border: rgba(255,255,255,0.10);
 
-    --shadow-sm: 0 4px 15px rgba(8, 21, 37, 0.06);
-    --shadow-md: 0 12px 35px rgba(8, 21, 37, 0.10);
-    --shadow-lg: 0 20px 60px rgba(8, 21, 37, 0.16);
+    --shadow-sm: 0 4px 15px rgba(0,0,0,0.15);
+    --shadow-md: 0 12px 35px rgba(0,0,0,0.22);
+    --shadow-lg: 0 20px 60px rgba(0,0,0,0.30);
 
     --radius-sm: 10px;
     --radius-md: 16px;
     --radius-lg: 24px;
 
     --container: 1180px;
-
     --transition: 0.3s ease;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -2182,4 +2180,227 @@ button:focus-visible {
         display: flex !important;
         min-height: 55px !important;
     }
+}
+
+/* ==================================================
+   FANTA CASTRONUOVO - DARK STADIUM THEME
+   Blu notte / Oro / Bianco
+================================================== */
+
+/* SFONDO GENERALE */
+
+html,
+body {
+    background: #101827;
+    color: #FFFFFF;
+}
+
+body {
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(39, 66, 101, 0.16),
+            transparent 55%
+        ),
+        #101827;
+}
+
+/* SEZIONI GENERALI */
+
+.section,
+.section:not(.hero),
+.info-section,
+.newspaper-section,
+.communications-section,
+.honours-section {
+    background-color: transparent;
+}
+
+.section-title,
+.section-header h2,
+.honours-heading h2,
+.info-item h3 {
+    color: #FFFFFF;
+}
+
+.section-description,
+.honours-heading p,
+.info-item p {
+    color: #AAB6C5;
+}
+
+/* INFO CARD */
+
+.info-item {
+    background: #1B293B;
+    border: 1px solid rgba(214,173,85,.18);
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+}
+
+.info-item:hover {
+    border-color: #D6AD55;
+}
+
+.info-item h3 {
+    color: #FFFFFF;
+}
+
+.info-item p {
+    color: #AAB6C5;
+}
+
+/* GIORNALE */
+
+.newspaper-feature {
+    background: #1B293B;
+    border: 1px solid rgba(214,173,85,.2);
+    box-shadow: 0 18px 40px rgba(0,0,0,.22);
+}
+
+.newspaper-content h2,
+.newspaper-content h3 {
+    color: #FFFFFF;
+}
+
+.newspaper-content p {
+    color: #C0CAD7;
+}
+
+.edition-date,
+.newspaper-date {
+    color: #AAB6C5;
+}
+
+/* COMUNICATI */
+
+.communications-section {
+    background: transparent;
+}
+
+.communication-card {
+    background: #1B293B;
+    border: 1px solid rgba(255,255,255,.09);
+    border-left: 4px solid #D6AD55;
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+}
+
+.communication-card h2,
+.communication-card h3,
+.communication-signature strong {
+    color: #FFFFFF;
+}
+
+.communication-card p,
+.communication-card li,
+.communication-signature span {
+    color: #B7C2D0;
+}
+
+/* REGOLAMENTO */
+
+.regulation-sidebar,
+.regulation-article {
+    background: #1B293B;
+    border: 1px solid rgba(255,255,255,.09);
+    box-shadow: 0 10px 28px rgba(0,0,0,.18);
+}
+
+.regulation-sidebar h3,
+.regulation-article h2,
+.regulation-article h3 {
+    color: #FFFFFF;
+}
+
+.regulation-article p,
+.regulation-article li,
+.regulation-article ul,
+.regulation-article ol {
+    color: #B7C2D0;
+}
+
+.regulation-article strong {
+    color: #F0D58E;
+}
+
+.regulation-index a {
+    color: #B7C2D0;
+}
+
+.regulation-index a:hover,
+.regulation-index a.active {
+    color: #D6AD55;
+    background: rgba(214,173,85,.13);
+}
+
+/* TABELLE PREMI */
+
+.prize-row {
+    background: #24364D;
+}
+
+.prize-row span {
+    color: #E0E7EF;
+}
+
+/* TITOLI E TESTI SECONDARI */
+
+.text-muted,
+.section-description {
+    color: #AAB6C5;
+}
+
+.divider {
+    background: rgba(255,255,255,.12);
+}
+
+/* ALBO D'ORO */
+
+.honours-section {
+    background: transparent;
+}
+
+.honours-heading > span {
+    color: #D6AD55;
+}
+
+.honours-heading h2 {
+    color: #FFFFFF;
+}
+
+.honours-heading p {
+    color: #AAB6C5;
+}
+
+/* FOOTER */
+
+.site-footer,
+footer {
+    background: #0B1220;
+    color: #AAB6C5;
+    border-top: 1px solid rgba(214,173,85,.18);
+}
+
+.site-footer h3,
+.site-footer h4,
+footer h3,
+footer h4 {
+    color: #FFFFFF;
+}
+
+.site-footer a,
+footer a {
+    color: #B7C2D0;
+}
+
+.site-footer a:hover,
+footer a:hover {
+    color: #D6AD55;
+}
+
+/* FOCUS ACCESSIBILE */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #D6AD55;
+    outline-offset: 4px;
 }
