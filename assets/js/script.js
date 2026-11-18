@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", upd, { passive: true });
   }
 
-    /* 5. Conto alla rovescia scadenza quote */
+  /* 5. Conto alla rovescia scadenza quote */
   const countEl = document.querySelector("[data-deadline-count]");
   const noticeEl = document.querySelector(".notice");
   if (countEl) {
@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (days === 1) countEl.textContent = "Scade domani";
     else if (days === 0) countEl.textContent = "Scade oggi";
     else if (noticeEl) noticeEl.hidden = true;
-  }
   }
 
   /* 6. Lightbox */
