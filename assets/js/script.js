@@ -46,22 +46,18 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", upd, { passive: true });
   }
 
-  /* 5. Conto alla rovescia scadenza quote */
+    /* 5. Conto alla rovescia scadenza quote */
   const countEl = document.querySelector("[data-deadline-count]");
   const noticeEl = document.querySelector(".notice");
   if (countEl) {
     const today = new Date(); today.setHours(0, 0, 0, 0);
-    const deadline = new Date(2026, 10, 21);   // 21 novembre 2026
-    const final = new Date(2026, 11, 31);      // 31 dicembre 2026
+    const deadline = new Date(2026, 11, 31);   // 31 dicembre 2026
     const days = Math.round((deadline - today) / 86400000);
-    const textEl = document.querySelector("[data-deadline-text]");
     if (days > 1) countEl.textContent = "Mancano " + days + " giorni";
     else if (days === 1) countEl.textContent = "Scade domani";
     else if (days === 0) countEl.textContent = "Scade oggi";
-    else if (today <= final) {
-      countEl.textContent = "Termine ultimo: 31 dicembre 2026";
-      if (textEl) textEl.textContent = "Scadenza del 21 novembre superata: sono previste penalizzazioni in classifica.";
-    } else if (noticeEl) noticeEl.hidden = true;
+    else if (noticeEl) noticeEl.hidden = true;
+  }
   }
 
   /* 6. Lightbox */
