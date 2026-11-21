@@ -59,6 +59,21 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (noticeEl) noticeEl.hidden = true;
   }
 
+  /* 5b. Aggiornamenti: spariscono dopo 7 giorni dalla data indicata */
+  const MAX_DAYS = 7;
+  const updates = document.querySelectorAll(".update[data-date]");
+  if (updates.length) {
+    const t0 = new Date(); t0.setHours(0, 0, 0, 0);
+    let visible = 0;
+    updates.forEach(el => {
+      const [y, m, d] = el.dataset.date.split("-").map(Number);
+      const age = Math.round((t0 - new Date(y, m - 1, d)) / 86400000);
+      if (age > MAX_DAYS) el.hidden = true; else visible++;
+    });
+    const emptyMsg = document.querySelector("[data-updates-empty]");
+    if (emptyMsg) emptyMsg.hidden = visible > 0;
+  }
+
   /* 6. Lightbox */
   const lb = document.createElement("div");
   lb.className = "lightbox";
