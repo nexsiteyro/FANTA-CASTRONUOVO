@@ -30,7 +30,7 @@
     <button class="menu-toggle" aria-label="Apri il menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="main-nav" aria-label="Navigazione principale">
       <a href="index.html" class="active">Home</a>
-      <a href="index.html#albo-oro">Albo d'oro</a>
+      <a href="albo-oro.html">Albo d'oro</a>
       <a href="index.html#ultimo-giornale">Il Giornale</a>
       <a href="index.html#torneo-dei-rioni">Torneo dei Rioni</a>
       <a href="comunicati.html">Comunicati</a>
@@ -62,38 +62,18 @@
   <div class="container">
     <div class="section-heading">
       <h2>Ultimi aggiornamenti</h2>
-      <p>Tutto quello che è stato pubblicato di recente, dal più nuovo al più vecchio.</p>
+      <p>Le novità degli ultimi 7 giorni. Per tutto il resto c'è l'archivio dei comunicati.</p>
     </div>
     <div class="updates">
-      <a class="update" href="comunicati.html#comunicato-4"><time datetime="2026-11-18">18 novembre 2026</time><span class="tag">Comunicato</span><h3>Proroga scadenza versamento quota di iscrizione</h3><span class="go">Leggi</span></a>
-      <a class="update" href="#ultimo-giornale"><time datetime="2026-11-08">8 novembre 2026</time><span class="tag tag-news">Il Giornale</span><h3>Decima giornata: AL-NASK domina, Lukania e Bulfaro vincono in trasferta</h3><span class="go">Leggi</span></a>
-      <a class="update" href="comunicati.html#comunicato-3"><time datetime="2026-11-06">6 novembre 2026</time><span class="tag">Comunicato</span><h3>Gestione degli infortuni e sostituzione dei giocatori</h3><span class="go">Leggi</span></a>
-      <a class="update" href="comunicati.html#comunicato-2"><time datetime="2026-10-28">28 ottobre 2026</time><span class="tag">Comunicato</span><h3>Scadenza versamento quota di iscrizione – Stagione 2026/2027</h3><span class="go">Leggi</span></a>
+      <a class="update" data-date="2026-11-18" href="comunicati.html#comunicato-4"><time datetime="2026-11-18">18 novembre 2026</time><span class="tag">Comunicato</span><h3>Proroga scadenza versamento quota di iscrizione</h3><span class="go">Leggi</span></a>
+      <a class="update" data-date="2026-11-08" href="#ultimo-giornale"><time datetime="2026-11-08">8 novembre 2026</time><span class="tag tag-news">Il Giornale</span><h3>Decima giornata: AL-NASK domina, Lukania e Bulfaro vincono in trasferta</h3><span class="go">Leggi</span></a>
+      <a class="update" data-date="2026-11-06" href="comunicati.html#comunicato-3"><time datetime="2026-11-06">6 novembre 2026</time><span class="tag">Comunicato</span><h3>Gestione degli infortuni e sostituzione dei giocatori</h3><span class="go">Leggi</span></a>
+      <a class="update" data-date="2026-10-28" href="comunicati.html#comunicato-2"><time datetime="2026-10-28">28 ottobre 2026</time><span class="tag">Comunicato</span><h3>Scadenza versamento quota di iscrizione – Stagione 2026/2027</h3><span class="go">Leggi</span></a>
+      <p class="updates-empty" data-updates-empty hidden>Nessun aggiornamento negli ultimi 7 giorni. Consulta l'<a href="comunicati.html">archivio dei comunicati</a>.</p>
     </div>
   </div>
 </section>
 
-<section class="section section-dark" id="albo-oro">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Albo d'oro</h2>
-      <p>Le squadre che hanno scritto la storia del Fanta Castronuovo.</p>
-    </div>
-    <div class="honours">
-      <article class="honour">
-        <div class="honour-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0V4Z"/><path d="M8 6H5a1 1 0 0 0-1 1c0 2.2 1.6 4 4 4M16 6h3a1 1 0 0 1 1 1c0 2.2-1.6 4-4 4"/><path d="M12 13v4M8.5 20h7M10 17h4v3h-4z"/></svg><h3>Campionato</h3></div>
-        <p class="honour-sub">Palmarès ufficiale · I campioni della Lega</p>
-        <div class="honour-row"><div class="honour-year">2025/2026</div><div><div class="honour-team">Lele Mosina FC</div><div class="honour-coach">Allenatore: Mattia</div></div><div class="honour-pts">73 punti</div></div>
-        <div class="honour-row"><div class="honour-year">2022/2023</div><div><div class="honour-team">Horto Muso FC</div><div class="honour-coach">Allenatore: Stefano</div></div><div class="honour-pts">75 punti</div></div>
-      </article>
-      <article class="honour honour-single">
-        <div class="honour-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0V4Z"/><path d="M8 6H5a1 1 0 0 0-1 1c0 2.2 1.6 4 4 4M16 6h3a1 1 0 0 1 1 1c0 2.2-1.6 4-4 4"/><path d="M12 13v4M8.5 20h7M10 17h4v3h-4z"/></svg><h3>Torneo dei Rioni</h3></div>
-        <p class="honour-sub">Champions · Albo d'oro</p>
-        <div class="honour-row"><div><div class="honour-year">Campione 2024/2025</div><div class="honour-team" style="margin-top:8px">Tu Szczeney Dalle Stelle</div><div class="honour-coach">Allenatore: Bacca</div></div></div>
-      </article>
-    </div>
-  </div>
-</section>
 
 <section class="section" id="ultimo-giornale">
   <div class="container">
@@ -197,7 +177,7 @@
       <h4>Il sito</h4>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#albo-oro">Albo d'oro</a></li>
+        <li><a href="albo-oro.html">Albo d'oro</a></li>
         <li><a href="comunicati.html">Comunicati</a></li>
         <li><a href="regolamento.html">Regolamento</a></li>
       </ul>
