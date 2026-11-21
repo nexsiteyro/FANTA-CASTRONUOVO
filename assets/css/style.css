@@ -323,3 +323,72 @@ body.lightbox-open{overflow:hidden}
   .final-communication{background:#fff!important;border:1px solid #bbb}
   .final-communication h2,.final-communication p{color:#000}
 }
+
+
+/* ==========================================================
+   AGGIUNTE: aggiornamenti a scadenza + pagina Albo d'oro
+   ========================================================== */
+[hidden]{display:none!important}
+.updates-empty{padding:28px 8px;margin:0;color:var(--text-2);border-bottom:1px solid var(--line)}
+.section-cta{margin-top:32px}
+
+/* ---------- Albo d'oro: struttura comune ---------- */
+.albo-block{position:relative;overflow:hidden;isolation:isolate;padding:88px 0;color:#fff}
+.albo-head{margin-bottom:40px}
+.albo-head h2{color:#fff;font-size:clamp(46px,7vw,92px);font-weight:800;text-transform:uppercase;line-height:.9}
+.albo-head p{margin:14px 0 0;color:rgba(255,255,255,.8);font-size:18px;max-width:52ch}
+.albo-feature{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;border-radius:22px;padding:40px 48px;margin-bottom:28px}
+.albo-emblem svg{display:block;width:150px;height:auto}
+.albo-label{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em}
+.albo-team{font-family:var(--display);font-size:clamp(40px,5.6vw,76px);font-weight:800;line-height:.95;text-transform:uppercase;margin:10px 0 22px}
+.albo-meta{display:flex;flex-wrap:wrap;gap:14px 40px;margin:0}
+.albo-meta dt{font-size:12px;font-weight:600;letter-spacing:.04em;margin-bottom:2px}
+.albo-meta dd{margin:0;font-family:var(--display);font-size:38px;font-weight:700;line-height:1}
+
+/* ---------- Stile Serie A: campionato ---------- */
+.sa{background:linear-gradient(135deg,#0d55d8 0%,#0a3a9c 48%,#04193a 100%)}
+.sa::before{content:"";position:absolute;inset:0;z-index:-1;background:repeating-linear-gradient(115deg,rgba(255,255,255,.045) 0 2px,transparent 2px 46px)}
+.sa::after{content:"";position:absolute;z-index:-1;right:-5%;top:-8%;width:560px;height:660px;background:rgba(255,255,255,.07);clip-path:polygon(30% 0,70% 0,100% 78%,50% 100%,0 78%)}
+.sa .albo-feature{background:#fff;color:var(--ink);box-shadow:0 30px 70px rgba(2,15,50,.45)}
+.sa .albo-label{color:var(--royal-d)}
+.sa .albo-team{color:var(--ink)}
+.sa .albo-meta dt{color:var(--muted)}
+.sa .albo-meta dd{color:var(--royal-d)}
+.sa-table{border-radius:18px;overflow:hidden;background:rgba(4,25,58,.6);border:1px solid rgba(255,255,255,.18)}
+.sa-row{position:relative;display:grid;grid-template-columns:150px 1fr 1fr 110px;gap:16px;align-items:center;padding:20px 32px;border-top:1px solid rgba(255,255,255,.12)}
+.sa-row.head{border-top:0;background:rgba(0,0,0,.28);padding-top:12px;padding-bottom:12px;font-size:12px;font-weight:700;letter-spacing:.08em;color:rgba(255,255,255,.65)}
+.sa-row.champion{background:rgba(255,255,255,.07)}
+.sa-row.champion::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(var(--it-green) 0 33.3%,#fff 33.3% 66.6%,var(--it-red) 66.6%)}
+.sa-season{font-family:var(--display);font-size:32px;font-weight:700;line-height:1}
+.sa-team{font-family:var(--display);font-size:30px;font-weight:700;text-transform:uppercase;line-height:1.05}
+.sa-coach{font-size:16px;color:rgba(255,255,255,.82)}
+.sa-pts{font-family:var(--display);font-size:36px;font-weight:700;text-align:right;line-height:1}
+
+/* ---------- Stile Champions League: Torneo dei Rioni ---------- */
+.cl{background-color:#050a24;background-image:radial-gradient(60% 55% at 50% 0,rgba(61,95,255,.38),transparent 70%),radial-gradient(45% 45% at 92% 100%,rgba(120,150,255,.2),transparent 70%)}
+.cl::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.75;background-size:260px 220px;background-image:radial-gradient(1.6px 1.6px at 24px 34px,#fff,transparent),radial-gradient(1px 1px at 96px 130px,rgba(255,255,255,.85),transparent),radial-gradient(1.6px 1.6px at 170px 64px,#cfe0ff,transparent),radial-gradient(1px 1px at 226px 182px,#fff,transparent),radial-gradient(1.2px 1.2px at 60px 190px,#b8cdff,transparent)}
+.cl .albo-head h2{color:#fff;background:linear-gradient(180deg,#fff 20%,#9db4ee);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.cl .albo-feature{background:linear-gradient(160deg,rgba(45,75,210,.3),rgba(8,14,60,.75));border:1px solid rgba(160,185,255,.4);box-shadow:0 0 0 1px rgba(255,255,255,.05) inset,0 30px 80px rgba(20,40,170,.4)}
+.cl .albo-label{color:#a9c1ff}
+.cl .albo-team{color:#fff}
+.cl .albo-meta dt{color:rgba(190,208,255,.75)}
+.cl .albo-meta dd{color:#fff}
+.cl-note{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border:1px solid rgba(160,185,255,.3);border-radius:16px;padding:22px 28px;background:rgba(255,255,255,.04)}
+.cl-note p{margin:0;color:rgba(255,255,255,.85)}
+.cl-note strong{color:#fff}
+
+@media (max-width:900px){
+  .albo-feature{grid-template-columns:1fr;justify-items:start;gap:22px;padding:30px 26px}
+  .albo-emblem svg{width:112px}
+  .sa::after{width:360px;height:430px;right:-18%}
+}
+@media (max-width:640px){
+  .albo-block{padding:60px 0}
+  .sa-row.head{display:none}
+  .sa-row{grid-template-columns:1fr auto;gap:4px 14px;padding:18px 20px}
+  .sa-season{grid-column:1;font-size:26px}
+  .sa-pts{grid-column:2;grid-row:1}
+  .sa-team{grid-column:1/-1;font-size:28px}
+  .sa-coach{grid-column:1/-1}
+  .albo-meta dd{font-size:32px}
+}
