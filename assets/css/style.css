@@ -413,3 +413,25 @@ body.lightbox-open{overflow:hidden}
   .albo-logo{width:120px}
   .albo-photo{width:min(260px,100%)}
 }
+
+/* ---------- Giornali: sottotitolo, gruppi e classifiche ---------- */
+.edition-sub{font-size:20px;font-weight:600;line-height:1.4;color:var(--ink);max-width:60ch;margin:0 0 14px}
+.edition-text{max-width:62ch;color:var(--text-2);font-size:17px;line-height:1.7}
+.prose .edition-text,.prose .edition-sub{max-width:62ch}
+.prose .report p{font-size:15px;max-width:none;margin:0;line-height:1.6}
+.results-group{padding:10px 20px;background:var(--tint);border-bottom:1px solid var(--line);font-size:13px;font-weight:700;color:var(--royal-d);letter-spacing:.04em}
+.standings{margin:0 0 26px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.standings h4{font-family:var(--body);font-size:14px;font-weight:700;color:var(--ink);padding:14px 20px;background:var(--tint);border-bottom:1px solid var(--line)}
+.standings ol{list-style:none;margin:0;padding:0}
+.standings li{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:12px 20px;border-bottom:1px solid var(--line);font-weight:600}
+.standings li:last-child{border-bottom:0}
+.standings li:first-child{box-shadow:inset 4px 0 0 var(--royal)}
+.st-pos{font-family:var(--display);font-size:22px;color:var(--muted);line-height:1}
+.st-team small{display:block;font-size:12px;font-weight:500;color:var(--muted);margin-top:2px}
+.st-pts{font-family:var(--display);font-size:26px;font-weight:700;color:var(--ink);line-height:1}
+.standings-groups{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 26px}
+.standings-groups .standings{margin:0}
+@media (max-width:640px){
+  .standings-groups{grid-template-columns:1fr}
+  .edition-sub{font-size:18px}
+}
